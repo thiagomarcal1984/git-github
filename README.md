@@ -86,3 +86,10 @@ git push -u ssh main
 > ```bash
 > type C:\Users\Thiago\.ssh\id_ed25519.pub
 > ```
+
+# Colaborando em projetos
+## Clonando um repositório
+Para clonar o repositório, use o comando `git clone [url]`:
+```bash
+git clone https://github.com/thiagomarcal1984/git-github
+```
