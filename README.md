@@ -19,3 +19,70 @@ O comando abaixo inicializa um novo repositório Git (caso ele não tenha sido i
 ```bash
 git init
 ```
+## Sincronizando repositórios
+Como realizar o commit inicial:
+```bash
+# Adiciona todos os arquivos que estão dentro do diretório corrente.
+git add .
+# Realiza o commit do repositório e acrescenta uma mensagem.
+git commit -m "Projeto inicial"
+```
+Caso o commit não seja realizado, possivelmente é porque falta configurar o e-mail e o nome da pessoa que está atuando no código: 
+```bash
+# Configura o e-mail e o nome do usuário que fará o commit: 
+git config --global user.email meu@email.com
+git config --global user.name "Meu Nome"
+```
+> A flag `--global` indica que essas configurações se aplicarão a qualquer repositório no computador do usuário, ele não se limita a um repositório local.
+
+Mudando o nome do branch (a flag `-m` significa `move`, de renomear):
+```bash
+# Mudando o nome do ramo atual para main.
+git branch -m main
+```
+
+Definindo o servidor git remoto e empurrando (pushing) o código para o remoto: 
+```bash
+git remote add ssh https://github.com/thiagomarcal1984/git-github
+git push -u ssh main
+```
+> A flag `-u` ou `--set-upstream` cria um vínculo entre o branch remoto e o branch local. Assim, o envio do código é simplificado porque você não precisa informar qual o branch local (origem) e o branch remoto (destino).
+
+> Desta vez a ideia é usar o SSH ao invés do HTTPS. Perceba a mudança do nome do servidor remoto para `ssh` ao invés de `origin`
+> Para se comunicar com o GitHub via SSH, você vai precisar de uma chave SSH. Para criá-la, acesse as configurações da conta e em seguida procure a opção "SSH and GPG keys". Ao clicar nessa opção, haverá 3 campos:
+> 1. Title (nome do computador);
+> 2. Key type (deixe marcada a opção Authentication Key); e
+> 3. Key (a chave SSH que será gerada a partir do terminal).
+> 
+> A chave é gerada com o seguinte comando:
+> ```
+> ssh-keygen -t ed25519 -C "tma@cdtn.br"
+> ```
+> 
+> ```
+> # Saída: 
+> Generating public/private ed25519 key pair.
+> Enter file in which to save the key (C:\Users\Thiago/.ssh/id_ed25519): 
+> Enter passphrase (empty for no passphrase): 
+> Enter same passphrase again: 
+> Your identification has been saved in C:\Users\Thiago/.ssh/id_ed25519
+> Your public key has been saved in C:\Users\Thiago/.ssh/id_ed25519.pub
+> The key fingerprint is:
+> SHA256:R/Q25Jvzfe0AeCgko/2wdr7pFEX7k3yApYoNPlmjRlk thiagomarcal1984@gmail.com
+> The key's randomart image is:
+> +--[ED25519 256]--+
+> |        E o o    |
+> |       o o O     |
+> |      * + * *    |
+> |     = @ = * *   |
+> |    . X S + @ .  |
+> |     . = + . * ..|
+> |      o +     o +|
+> |     . + .     o.|
+> |       .=.      .|
+> +----[SHA256]-----+
+> ```
+> Após a execução do comando, copie o conteúdo da chave pública e cole no campo `Key` no GitHub:
+> ```bash
+> type C:\Users\Thiago\.ssh\id_ed25519.pub
+> ```
