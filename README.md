@@ -136,3 +136,18 @@ A simulação é simples:
 2. uma pessoa muda uma linha no código, faz commit e sobe o commit para o repositório remoto;
 3. outra pessoa muda a mesma linha, faz commit e faz um pull do repositório;
 4. a pessoa que faz o pull tem seu arquivo modificado com a identificação dos conflitos.
+
+## Resolvendo conflitos
+Conflitos envolvem necessariamente em criar um novo commit sobre aquele que originou o conflito. Nada de usar a flag `--amend`: é necessário um novo commit mesmo.
+
+Exemplo de conflito depois do `git pull`:
+```js
+<<<<<<< HEAD
+let numeroLimite = 30;
+=======
+let numeroLimite = 50;
+>>>>>>> 1f7e18e3f174e0441afecd4f24b7336107f759b1
+```
+A `<<< HEAD/Current Change` corresponde à mudança no repositório local, enquanto `>>> hash/Incoming Change` corresponde à mudança no repositório remoto.
+
+Edite o arquivo com conflito e crie o novo commit com a resolução do conflito.
