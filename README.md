@@ -93,3 +93,18 @@ Para clonar o repositório, use o comando `git clone [url]`:
 ```bash
 git clone https://github.com/thiagomarcal1984/git-github
 ```
+
+## Realizando um commit
+Use o `git status` para saber quais arquivos estão em processo de mudança.
+
+Vamos adicionar todas as mudanças para a staging area com o comando:
+```bash
+git add .
+```
+
+Uma vez que os arquivos foram adicionados à staging area, fazemos o commit: 
+```bash
+git commit -m "Realizando um commit"
+```
+
+Para ver os commits, execute o comando `git log`.
