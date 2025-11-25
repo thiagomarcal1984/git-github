@@ -119,3 +119,9 @@ Caso queira ver a URL dos remotos, use o comando `git remote -v` (verboso).
 Para adicionar colaboradores a um projeto, vá nas configurações do repositório e procure a opção `Collaborators`. Nela você pode acrescentar o nome do usuário que terá permissão para escrever no repositório do GitHub. 
 
 A pessoa acrescentada ainda precisará aceitar o convite para ser colaborador do repositório.
+
+## Baixando novos commits
+Para baixar as alterações do repositório remoto, use o comando:
+```bash
+git pull origin main
+```
