@@ -151,3 +151,9 @@ let numeroLimite = 50;
 A `<<< HEAD/Current Change` corresponde à mudança no repositório local, enquanto `>>> hash/Incoming Change` corresponde à mudança no repositório remoto.
 
 Edite o arquivo com conflito e crie o novo commit com a resolução do conflito.
+
+# Voltando no tempo
+## Desfazendo um commit
+O comando `git revert` desfaz o commit referenciado pela ID que você fornecer.
+
+Exemplo: o snapshot A aparece antes do snapshot B. O `git revert [hash-B]` pega o ID do snapshot B e o código fica igual ao do snapshot A, mas com um novo ID de snapshot. No final, o log do git terá 3 ids de snapshots/commits.
