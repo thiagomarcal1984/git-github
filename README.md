@@ -171,3 +171,10 @@ Para corrigir/emendar o commit atual, use o comando abaixo:
 ```bash
 git commit --amend -m "Mensagem"
 ```
+
+# Mais recursos
+## Readme do repositório
+Crie um arquivo com o nome `README.md` para criar um arquivo com a linguagem de marcação markdown.
+
+- [Referências de Markdown no site do Wordpress](https://wordpress.com/support/markdown-quick-reference/)
+- [Editor de Markdown MEditor.md](https://pandao.github.io/editor.md/en.html)
