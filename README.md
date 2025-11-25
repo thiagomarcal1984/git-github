@@ -165,3 +165,9 @@ git reset --hard [id-do-snapshot-para-onde-voltar]
 # exemplo: git reset --hard 4a46fd9
 ```
 > É por isso que geralmente usamos a variável `head` seguida de um til e o número de snapshots para voltar (ex.: `head~2`): a ideia não é apagar um commit, mas sim cortar os snapshots até um commit específico.
+
+## Alterando o último commit
+Para corrigir/emendar o commit atual, use o comando abaixo:
+```bash
+git commit --amend -m "Mensagem"
+```
