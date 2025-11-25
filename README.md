@@ -157,3 +157,11 @@ Edite o arquivo com conflito e crie o novo commit com a resolução do conflito.
 O comando `git revert` desfaz o commit referenciado pela ID que você fornecer.
 
 Exemplo: o snapshot A aparece antes do snapshot B. O `git revert [hash-B]` pega o ID do snapshot B e o código fica igual ao do snapshot A, mas com um novo ID de snapshot. No final, o log do git terá 3 ids de snapshots/commits.
+
+## Resetando um commit
+Para apagar um commit, use o comando abaixo:
+```bash
+git reset --hard [id-do-snapshot-para-onde-voltar]
+# exemplo: git reset --hard 4a46fd9
+```
+> É por isso que geralmente usamos a variável `head` seguida de um til e o número de snapshots para voltar (ex.: `head~2`): a ideia não é apagar um commit, mas sim cortar os snapshots até um commit específico.
