@@ -125,3 +125,7 @@ Para baixar as alterações do repositório remoto, use o comando:
 ```bash
 git pull origin main
 ```
+
+# Utilizando Git na IDE
+## Git no VSCode
+Nada de muito novo: o uso do Source Control a partir do VS Code é mais simples que a linha de comando do Git.
