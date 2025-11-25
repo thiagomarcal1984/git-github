@@ -129,3 +129,10 @@ git pull origin main
 # Utilizando Git na IDE
 ## Git no VSCode
 Nada de muito novo: o uso do Source Control a partir do VS Code é mais simples que a linha de comando do Git.
+
+## Simulando um conflito
+A simulação é simples: 
+1. dois usuários baixam o mesmo repositório e trabalham no mesmo branch;
+2. uma pessoa muda uma linha no código, faz commit e sobe o commit para o repositório remoto;
+3. outra pessoa muda a mesma linha, faz commit e faz um pull do repositório;
+4. a pessoa que faz o pull tem seu arquivo modificado com a identificação dos conflitos.
