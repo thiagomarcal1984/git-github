@@ -178,3 +178,10 @@ Crie um arquivo com o nome `README.md` para criar um arquivo com a linguagem de 
 
 - [Referências de Markdown no site do Wordpress](https://wordpress.com/support/markdown-quick-reference/)
 - [Editor de Markdown MEditor.md](https://pandao.github.io/editor.md/en.html)
+
+## Ignorando arquivos no repositório
+O arquivo `.gitignore` lista todos os arquivos e diretórios que não queremos versionar no repositório git.
+
+Para exemplificar, foi criado o arquivo `.gitignore` que menciona o diretório `temp/`. O diretório e seu conteúdo não serão versionados.
+
+Há sites como o [gitignore.io](https://www.toptal.com/developers/gitignore/) que facilitam a criação de arquivos `.gitignore` a partir das linguagens que você informar para o site.
