@@ -185,3 +185,8 @@ O arquivo `.gitignore` lista todos os arquivos e diretórios que não queremos v
 Para exemplificar, foi criado o arquivo `.gitignore` que menciona o diretório `temp/`. O diretório e seu conteúdo não serão versionados.
 
 Há sites como o [gitignore.io](https://www.toptal.com/developers/gitignore/) que facilitam a criação de arquivos `.gitignore` a partir das linguagens que você informar para o site.
+
+## Compartilhando códigos com Gist
+O Gist é um recurso do GitHub que permite "criar arquivos de descrição de parte do código que você está desenvolvendo". Um Gist possui recursos de acrescentar vários arquivos diferentes com conteúdos diferentes do repositório original (o conteúdo dos arquivos costuma ser mais enxuto que o original).
+
+Os Gists possuem uma URL, que pode ser pública ou privada. Daí você pode compartilhar essa URL para quem se interessar.
